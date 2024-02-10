@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=70", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "zenflux"
+version = "0.1.0"
+description = "Market stress regime engine — 5 microstructure signals into one zen_index with 5 market states"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "zenfluxdev", email = "zenfluxdev@users.noreply.github.com" }]
+requires-python = ">=3.10"
+keywords = ["crypto", "volatility", "market-regime", "stress", "microstructure", "signals"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "pytest-cov>=5.0"]
+
+[project.urls]
+Homepage = "https://github.com/zenfluxdev/ZenFlux"
+Repository = "https://github.com/zenfluxdev/ZenFlux"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["zenflux*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
