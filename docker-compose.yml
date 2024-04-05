@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  engine:
+    build: .
+    container_name: zenflux-engine
+    environment:
+      - CACHE_TTL=${CACHE_TTL:-30}
+    volumes:
+      - .:/app
+    command: python -m pytest tests/ -v
+  dashboard:
+    build:
+      context: ./dashboard
+      dockerfile: Dockerfile
+    container_name: zenflux-dashboard
+    ports:
+      - "${DASHBOARD_PORT:-3000}:3000"
