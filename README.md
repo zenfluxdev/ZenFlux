@@ -7,6 +7,8 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178c6?style=flat-square&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![License: MIT](https://img.shields.io/badge/License-MIT-374151?style=flat-square)](LICENSE)
 
+**$ZENFLX** `9Y9AmsGEnLBB2mo7rb7exB1965tKah4T62t3xthypump`
+
 </div>
 
 ---
